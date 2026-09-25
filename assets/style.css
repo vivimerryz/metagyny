@@ -325,8 +325,12 @@ p { margin: 0 0 1em; color: var(--color-text); }
 .hero-split .hero-visual { display: flex; justify-content: center; }
 .hero-split .hero-visual img {
   width: 100%;
-  max-width: 440px;
+  max-width: 380px;
   height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
 }
 @media (max-width: 900px) {
   .hero-split { grid-template-columns: 1fr; }
