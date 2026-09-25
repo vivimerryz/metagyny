@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 报告解读 | 元孕 Metagyny</title>
+<meta name="description" content="填写 AMH、激素六项、基础窦卵泡数等检查数值，AI 帮您快速读懂关键指标（产品概念演示）。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳转到主要内容</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="mark"><svg class="icon-svg" aria-hidden="true"><use href="assets/icons.svg#i-leaf"></use></svg></span>
+      <span class="logo-text"><span class="logo-cn">元孕</span><span class="logo-en">METAGYNY</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="articles.html">资讯中心</a></li>
+        <li><a href="clinics.html">机构库</a></li>
+        <li><a href="report.html" aria-current="page">AI报告解读</a></li>
+        <li><a href="consult.html">在线咨询</a></li>
+        <li><a href="resources.html">资源库</a></li>
+        <li><a href="faq.html">常见问题</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li><a class="lang-switch" href="en/report.html">EN</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding:48px 0 36px;">
+    <div class="container">
+      <span class="eyebrow">AI 报告解读</span>
+      <h1 class="mt-0">填写检查数值，AI 帮您先读懂它</h1>
+      <p class="lead">很多患者拿到激素六项、AMH、基础卵泡数这些报告时，满页数字却看不懂哪个正常、哪个该关注。填入数值，AI 会用大白话帮您梳理关键指标，再由顾问结合结果给出下一步建议。</p>
+      <div class="hero-actions">
+        <span class="demo-badge"><svg class="icon-svg" aria-hidden="true"><use href="assets/icons.svg#i-sparkle"></use></svg>产品概念演示</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-layout">
+
+        <div>
+          <div class="upload-panel">
+
+            <!-- Step 1: Form input -->
+            <div class="upload-step" id="upload-step">
+
+              <div class="text-center" style="margin-bottom:24px;">
+                <button class="btn btn-outline" id="use-sample-btn" type="button" style="font-size:0.85rem; padding:8px 18px;">
+                  <svg class="icon-svg" aria-hidden="true"><use href="assets/icons.svg#i-file-report"></use></svg>
+                  填入示例数值体验效果
+                </button>
+              </div>
+
+              <form id="report-form">
+                <div class="form-grid-2">
+                  <div class="form-row">
+                    <label for="f-amh">AMH 抗缪勒管激素 <span class="hint">ng/mL</span></label>
+                    <input type="number" step="0.01" min="0" id="f-amh" placeholder="例如：2.1">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-afc">基础窦卵泡数（AFC） <span class="hint">双侧总数，个</span></label>
+                    <input type="number" step="1" min="0" id="f-afc" placeholder="例如：12">
+                  </div>
+                </div>
+
+                <h4 style="margin:8px 0 14px; font-size:0.95rem; color:var(--color-text-muted); font-weight:600;">基础性激素六项 <span style="font-weight:400;">（通常为月经第2-3天空腹抽血）</span></h4>
+                <div class="form-grid-2">
+                  <div class="form-row">
+                    <label for="f-fsh">FSH 卵泡刺激素 <span class="hint">mIU/mL</span></label>
+                    <input type="number" step="0.01" min="0" id="f-fsh" placeholder="例如：7.8">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-lh">LH 黄体生成素 <span class="hint">mIU/mL</span></label>
+                    <input type="number" step="0.01" min="0" id="f-lh" placeholder="例如：5.2">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-e2">E2 雌二醇 <span class="hint">pg/mL</span></label>
+                    <input type="number" step="0.1" min="0" id="f-e2" placeholder="例如：45">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-prl">PRL 泌乳素 <span class="hint">ng/mL</span></label>
+                    <input type="number" step="0.1" min="0" id="f-prl" placeholder="例如：15">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-t">T 睾酮 <span class="hint">ng/dL</span></label>
+                    <input type="number" step="0.1" min="0" id="f-t" placeholder="例如：35">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-p">P 孕酮 <span class="hint">ng/mL</span></label>
+                    <input type="number" step="0.01" min="0" id="f-p" placeholder="例如：0.5">
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:8px;">
+                  <svg class="icon-svg" aria-hidden="true"><use href="assets/icons.svg#i-sparkle"></use></svg>
+                  生成 AI 解读
+                </button>
+                <p style="font-size:0.8rem; color:var(--color-text-muted); text-align:center; margin-top:12px; margin-bottom:0;">至少填写一项即可生成解读；不确定就先点上方「填入示例数值」看看效果。</p>
+              </form>
+            </div>
+
+            <!-- Step 2: Loading -->
+            <div class="ai-loading" id="ai-loading">
+              <div class="ai-spinner"></div>
+              <h3>AI 正在解读报告</h3>
+              <p class="ai-step" id="ai-loading-step">正在比对参考区间…</p>
+            </div>
+
+            <!-- Step 3: Result -->
+            <div class="ai-result" id="ai-result">
+              <div class="ai-file-chip">
+                <svg class="icon-svg" aria-hidden="true"><use href="assets/icons.svg#i-file-report"></use></svg>
+                <span id="ai-file-name">基于您填写的数值生成</span>
+              </div>
+
+              <h3>关键指标摘要</h3>
+              <div class="metric-grid" id="metric-grid"></div>
+
+              <div class="ai-narrative">
+                <h4><svg class="icon-svg" aria-hidden="true"><use href="assets/icons.svg#i-sparkle"></use></svg>AI 解读（大白话版）</h4>
+                <div id="ai-narrative-body"></div>
+              </div>
+
+              <div class="ai-disclaimer">
+                <svg class="icon-svg" aria-hidden="true"><use href="assets/icons.svg#i-shield"></use></svg>
+                <p>以上解读由 AI 根据通用医学参考区间自动生成，仅帮助您理解数值含义，<strong>不构成医疗诊断或治疗建议</strong>。不同医院、不同检测设备的参考区间可能存在差异，具体临床意义请务必以专业医生面诊评估为准。本页面为产品概念演示，您填写的数值仅在浏览器本地计算，不会被发送或存储到任何服务器。</p>
+              </div>
+
+              <div class="hero-actions" style="margin-top:0;">
+                <a class="btn btn-primary" href="consult.html">预约顾问，结合报告制定方案</a>
+                <button class="ai-reset" id="ai-reset-btn" type="button">重新填写</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <aside class="page-toc">
+          <h2>这个功能是怎么设计的</h2>
+          <ul style="display:flex; flex-direction:column; gap:14px; list-style:none; margin:0; padding:0;">
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--color-text-muted);"><svg class="icon-svg" aria-hidden="true" style="flex-shrink:0; margin-top:2px; color:var(--color-primary-dark);"><use href="assets/icons.svg#i-sparkle"></use></svg>填写后 AI 在本地比对通用参考区间，翻译成通俗语言</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--color-text-muted);"><svg class="icon-svg" aria-hidden="true" style="flex-shrink:0; margin-top:2px; color:var(--color-primary-dark);"><use href="assets/icons.svg#i-shield"></use></svg>正式版本涉及真实健康数据时，需要加密存储、访问权限控制，并符合 HIPAA 等医疗数据合规要求</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--color-text-muted);"><svg class="icon-svg" aria-hidden="true" style="flex-shrink:0; margin-top:2px; color:var(--color-primary-dark);"><use href="assets/icons.svg#i-chat"></use></svg>AI 解读仅作为"预习"，最终方案仍由顾问和医生结合真人判断给出</li>
+          </ul>
+          <div style="margin-top:20px; padding-top:18px; border-top:1px solid var(--color-border);">
+            <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:14px;">这是当前静态站点上的概念演示，您填写的数值仅在浏览器本地计算，不会被发送或存储到任何服务器。</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>元孕 Metagyny</h4>
+        <p style="color:var(--color-text-muted); font-size:0.92rem; max-width:280px;">专注美国试管婴儿（IVF）资讯与服务的一站式平台，陪伴每一个家庭走过求子之路。</p>
+      </div>
+      <div>
+        <h4>快速链接</h4>
+        <ul>
+          <li><a href="articles.html">资讯中心</a></li>
+          <li><a href="clinics.html">机构库</a></li>
+          <li><a href="resources.html">资源库</a></li>
+          <li><a href="faq.html">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于平台</h4>
+        <ul>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="consult.html">在线咨询</a></li>
+          <li><a href="report.html">AI报告解读</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系方式</h4>
+        <ul>
+          <li>微信客服：metagyny-ivf（示例）</li>
+          <li>咨询邮箱：hello@example.com</li>
+          <li>服务时间：周一至周日 9:00–21:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p>本站内容仅供信息参考，不构成医疗建议。具体诊疗方案请以专业医生面诊评估为准。</p>
+      <p>AI 报告解读功能为产品概念演示，您填写的数值仅在浏览器本地计算，不会被发送或存储到任何服务器，正式上线前需完成医疗数据合规审查。</p>
+      <p>© 2025 元孕 Metagyny. 机构库数据整理自 FertilityIQ 与 SART（美国生殖医学学会）官方认证名录，其余资讯、顾问及费用内容为示例，正式上线前请核实替换。</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership | Metagyny 元孕</title>
+<meta name="description" content="Choose the tier that fits you: Free, Plus, or Premium — each unlocking a different depth of clinic data, AI interpretation, and consultant service (product concept demo).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="mark"><svg class="icon-svg" aria-hidden="true"><use href="../assets/icons.svg#i-leaf"></use></svg></span>
+      <span class="logo-text"><span class="logo-cn">元孕</span><span class="logo-en">METAGYNY</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="clinics.html">Clinics</a></li>
+        <li><a href="report.html">AI Report Reader</a></li>
+        <li><a href="consult.html">Consult</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="membership.html" aria-current="page">Membership</a></li>
+        <li><a class="lang-switch" href="../membership.html">中文</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding:48px 0 36px;">
+    <div class="container">
+      <span class="eyebrow">Membership</span>
+      <h1 class="mt-0">Choose the depth of service that fits where you are</h1>
+      <p class="lead">From public information to the full clinic directory, AI interpretation, and dedicated consultant access — three tiers, three levels of depth.</p>
+      <div class="hero-actions">
+        <span class="demo-badge"><svg class="icon-svg" aria-hidden="true"><use href="../assets/icons.svg#i-sparkle"></use></svg>Product Concept Demo</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="member-status" id="member-status" hidden></div>
+
+      <div class="pricing-grid">
+
+        <article class="pricing-card">
+          <h3>Free</h3>
+          <p class="pricing-tagline">Just getting oriented</p>
+          <div class="pricing-price">$0</div>
+          <p class="pricing-note">No payment needed — sign up and go</p>
+          <ul>
+            <li><span class="tick">✓</span>All articles</li>
+            <li><span class="tick">✓</span>Clinics: 3-clinic preview per state</li>
+            <li><span class="tick">✓</span>FAQ / Resources fully open</li>
+            <li><span class="tick">✓</span>Standard consultant scheduling</li>
+          </ul>
+          <button type="button" class="btn btn-outline" data-select-tier="free">Choose Free</button>
+        </article>
+
+        <article class="pricing-card featured">
+          <span class="pricing-badge">Most Popular</span>
+          <h3>Plus</h3>
+          <p class="pricing-tagline">Seriously comparing clinics</p>
+          <div class="pricing-price">$29<span>/ mo (sample price)</span></div>
+          <p class="pricing-note">Includes everything in Free</p>
+          <ul>
+            <li><span class="tick">✓</span>Full clinic directory (109 clinics + CDC data)</li>
+            <li><span class="tick">✓</span>Google / Yelp review links fully unlocked</li>
+            <li><span class="tick">✓</span>AI Report Reader: full per-value interpretation</li>
+            <li><span class="tick">✓</span>Member-exclusive in-depth articles</li>
+            <li><span class="tick">✓</span>Priority consultant response within 48h</li>
+          </ul>
+          <button type="button" class="btn btn-primary" data-select-tier="plus">Upgrade to Plus</button>
+        </article>
+
+        <article class="pricing-card">
+          <h3>Premium</h3>
+          <p class="pricing-tagline">Ready to move forward</p>
+          <div class="pricing-price">$99<span>/ mo (sample price)</span></div>
+          <p class="pricing-note">Includes everything in Plus</p>
+          <ul>
+            <li><span class="tick">✓</span>A dedicated 1:1 consultant</li>
+            <li><span class="tick">✓</span>Priority response within 24h</li>
+            <li><span class="tick">✓</span>Custom clinic-matching recommendations</li>
+            <li><span class="tick">✓</span>Priority booking access</li>
+          </ul>
+          <button type="button" class="btn btn-outline" data-select-tier="premium">Upgrade to Premium</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container" style="max-width:640px;">
+      <div class="section-head">
+        <span class="eyebrow">Demo Login</span>
+        <h2>See what each membership tier actually shows</h2>
+        <p>Logging in here is a simulation, saved only in your browser — no real account, payment, or database involved. Pick a tier and log in to see the matching gated content on the Clinics, AI Report Reader, and Articles pages.</p>
+      </div>
+
+      <div class="form-card">
+        <form id="member-login-form">
+          <div class="form-row">
+            <label for="member-name">Your Name</label>
+            <input type="text" id="member-name" placeholder="e.g. Jane">
+          </div>
+          <div class="form-row">
+            <label>Membership Tier</label>
+            <div class="radio-group">
+              <label class="radio-pill"><input type="radio" name="member-tier" value="free" checked> Free</label>
+              <label class="radio-pill"><input type="radio" name="member-tier" value="plus"> Plus</label>
+              <label class="radio-pill"><input type="radio" name="member-tier" value="premium"> Premium</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Log In (Demo)</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Metagyny 元孕</h4>
+        <p style="color:var(--color-text-muted); font-size:0.92rem; max-width:280px;">A one-stop platform for US IVF information and services, supporting every family through the journey to parenthood.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="clinics.html">Clinics</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About the Platform</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="consult.html">Consult</a></li>
+          <li><a href="membership.html">Membership</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>WeChat: metagyny-ivf (sample)</li>
+          <li>Email: hello@example.com</li>
+          <li>Hours: Mon–Sun, 9:00 AM–9:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p>Content on this site is for informational purposes only and does not constitute medical advice. Please consult a licensed physician for your specific treatment plan.</p>
+      <p>The membership system is a product concept demo: login state and tier are stored only in your browser, with no real account, payment, or backend database — a real user and subscription system would be needed before launch.</p>
+      <p>© 2025 Metagyny. Clinic directory data is translated and compiled from FertilityIQ and SART (Society for Assisted Reproductive Technology); other articles, consultant profiles and pricing are sample content — verify and replace before launch.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.en.js"></script>
+</body>
+</html>

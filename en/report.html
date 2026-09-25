@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Report Reader | Metagyny 元孕</title>
+<meta name="description" content="Enter your AMH, hormone panel, and antral follicle count values and let AI help you quickly understand the key numbers (product concept demo).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="mark"><svg class="icon-svg" aria-hidden="true"><use href="../assets/icons.svg#i-leaf"></use></svg></span>
+      <span class="logo-text"><span class="logo-cn">元孕</span><span class="logo-en">METAGYNY</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="clinics.html">Clinics</a></li>
+        <li><a href="report.html" aria-current="page">AI Report Reader</a></li>
+        <li><a href="consult.html">Consult</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="lang-switch" href="../report.html">中文</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding:48px 0 36px;">
+    <div class="container">
+      <span class="eyebrow">AI Report Reader</span>
+      <h1 class="mt-0">Enter your numbers, and let AI help you read them first</h1>
+      <p class="lead">Many patients get a hormone panel, AMH or antral follicle count report full of numbers with no idea which ones are normal and which need attention. Fill in your values and AI will translate the key indicators into plain language — then your consultant can build next steps from there.</p>
+      <div class="hero-actions">
+        <span class="demo-badge"><svg class="icon-svg" aria-hidden="true"><use href="../assets/icons.svg#i-sparkle"></use></svg>Product Concept Demo</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-layout">
+
+        <div>
+          <div class="upload-panel">
+
+            <!-- Step 1: Form input -->
+            <div class="upload-step" id="upload-step">
+
+              <div class="text-center" style="margin-bottom:24px;">
+                <button class="btn btn-outline" id="use-sample-btn" type="button" style="font-size:0.85rem; padding:8px 18px;">
+                  <svg class="icon-svg" aria-hidden="true"><use href="../assets/icons.svg#i-file-report"></use></svg>
+                  Try it with sample values
+                </button>
+              </div>
+
+              <form id="report-form">
+                <div class="form-grid-2">
+                  <div class="form-row">
+                    <label for="f-amh">AMH (Anti-Müllerian Hormone) <span class="hint">ng/mL</span></label>
+                    <input type="number" step="0.01" min="0" id="f-amh" placeholder="e.g. 2.1">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-afc">Antral Follicle Count (AFC) <span class="hint">total, both ovaries</span></label>
+                    <input type="number" step="1" min="0" id="f-afc" placeholder="e.g. 12">
+                  </div>
+                </div>
+
+                <h4 style="margin:8px 0 14px; font-size:0.95rem; color:var(--color-text-muted); font-weight:600;">Baseline Hormone Panel <span style="font-weight:400;">(usually drawn fasting on cycle day 2–3)</span></h4>
+                <div class="form-grid-2">
+                  <div class="form-row">
+                    <label for="f-fsh">FSH (Follicle-Stimulating Hormone) <span class="hint">mIU/mL</span></label>
+                    <input type="number" step="0.01" min="0" id="f-fsh" placeholder="e.g. 7.8">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-lh">LH (Luteinizing Hormone) <span class="hint">mIU/mL</span></label>
+                    <input type="number" step="0.01" min="0" id="f-lh" placeholder="e.g. 5.2">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-e2">E2 (Estradiol) <span class="hint">pg/mL</span></label>
+                    <input type="number" step="0.1" min="0" id="f-e2" placeholder="e.g. 45">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-prl">PRL (Prolactin) <span class="hint">ng/mL</span></label>
+                    <input type="number" step="0.1" min="0" id="f-prl" placeholder="e.g. 15">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-t">T (Testosterone) <span class="hint">ng/dL</span></label>
+                    <input type="number" step="0.1" min="0" id="f-t" placeholder="e.g. 35">
+                  </div>
+                  <div class="form-row">
+                    <label for="f-p">P (Progesterone) <span class="hint">ng/mL</span></label>
+                    <input type="number" step="0.01" min="0" id="f-p" placeholder="e.g. 0.5">
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:8px;">
+                  <svg class="icon-svg" aria-hidden="true"><use href="../assets/icons.svg#i-sparkle"></use></svg>
+                  Generate AI Interpretation
+                </button>
+                <p style="font-size:0.8rem; color:var(--color-text-muted); text-align:center; margin-top:12px; margin-bottom:0;">Fill in at least one field to generate a result — not sure where to start? Click "Try it with sample values" above.</p>
+              </form>
+            </div>
+
+            <!-- Step 2: Loading -->
+            <div class="ai-loading" id="ai-loading">
+              <div class="ai-spinner"></div>
+              <h3>AI is interpreting your results</h3>
+              <p class="ai-step" id="ai-loading-step">Comparing against reference ranges…</p>
+            </div>
+
+            <!-- Step 3: Result -->
+            <div class="ai-result" id="ai-result">
+              <div class="ai-file-chip">
+                <svg class="icon-svg" aria-hidden="true"><use href="../assets/icons.svg#i-file-report"></use></svg>
+                <span id="ai-file-name">Generated from the values you entered</span>
+              </div>
+
+              <h3>Key Metrics Summary</h3>
+              <div class="metric-grid" id="metric-grid"></div>
+
+              <div class="ai-narrative">
+                <h4><svg class="icon-svg" aria-hidden="true"><use href="../assets/icons.svg#i-sparkle"></use></svg>AI Interpretation (Plain Language)</h4>
+                <div id="ai-narrative-body"></div>
+              </div>
+
+              <div class="ai-disclaimer">
+                <svg class="icon-svg" aria-hidden="true"><use href="../assets/icons.svg#i-shield"></use></svg>
+                <p>This interpretation is generated automatically by AI based on general medical reference ranges, to help you understand what the numbers mean — it is <strong>not a medical diagnosis or treatment recommendation</strong>. Reference ranges can vary by hospital and testing equipment; please treat an in-person evaluation by a licensed physician as authoritative. This page is a product concept demo — the values you enter are computed locally in your browser only and are never sent to or stored on any server.</p>
+              </div>
+
+              <div class="hero-actions" style="margin-top:0;">
+                <a class="btn btn-primary" href="consult.html">Book a Consult to Build a Plan Around This</a>
+                <button class="ai-reset" id="ai-reset-btn" type="button">Start Over</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <aside class="page-toc">
+          <h2>How This Feature Works</h2>
+          <ul style="display:flex; flex-direction:column; gap:14px; list-style:none; margin:0; padding:0;">
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--color-text-muted);"><svg class="icon-svg" aria-hidden="true" style="flex-shrink:0; margin-top:2px; color:var(--color-primary-dark);"><use href="../assets/icons.svg#i-sparkle"></use></svg>After you submit, AI compares your values against general reference ranges locally and translates the result into plain language.</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--color-text-muted);"><svg class="icon-svg" aria-hidden="true" style="flex-shrink:0; margin-top:2px; color:var(--color-primary-dark);"><use href="../assets/icons.svg#i-shield"></use></svg>A production version handling real health data would need encrypted storage, access controls, and compliance with regulations like HIPAA.</li>
+            <li style="display:flex; gap:10px; font-size:0.92rem; color:var(--color-text-muted);"><svg class="icon-svg" aria-hidden="true" style="flex-shrink:0; margin-top:2px; color:var(--color-primary-dark);"><use href="../assets/icons.svg#i-chat"></use></svg>This AI reading is only meant as a "preview" — the final plan still comes from a real consultant and physician working together.</li>
+          </ul>
+          <div style="margin-top:20px; padding-top:18px; border-top:1px solid var(--color-border);">
+            <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:14px;">This is a concept demo on the current static site. The values you enter are computed locally in your browser and are never sent to or stored on any server.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Metagyny 元孕</h4>
+        <p style="color:var(--color-text-muted); font-size:0.92rem; max-width:280px;">A one-stop platform for US IVF information and services, supporting every family through the journey to parenthood.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="clinics.html">Clinics</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About the Platform</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="consult.html">Consult</a></li>
+          <li><a href="report.html">AI Report Reader</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>WeChat: metagyny-ivf (sample)</li>
+          <li>Email: hello@example.com</li>
+          <li>Hours: Mon–Sun, 9:00 AM–9:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p>Content on this site is for informational purposes only and does not constitute medical advice. Please consult a licensed physician for your specific treatment plan.</p>
+      <p>The AI Report Reader is a product concept demo. The values you enter are computed locally in your browser only and are never sent to or stored on any server; a full medical-data compliance review is required before launch.</p>
+      <p>© 2025 Metagyny. Clinic directory data is translated and compiled from FertilityIQ and SART (Society for Assisted Reproductive Technology); other articles, consultant profiles and pricing are sample content — verify and replace before launch.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.en.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>会员中心 | 元孕 Metagyny</title>
+<meta name="description" content="选择适合您的会员方案：免费、进阶会员、尊享会员，解锁不同深度的机构数据、AI 解读与顾问服务（产品概念演示）。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳转到主要内容</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="mark"><svg class="icon-svg" aria-hidden="true"><use href="assets/icons.svg#i-leaf"></use></svg></span>
+      <span class="logo-text"><span class="logo-cn">元孕</span><span class="logo-en">METAGYNY</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="articles.html">资讯中心</a></li>
+        <li><a href="clinics.html">机构库</a></li>
+        <li><a href="report.html">AI报告解读</a></li>
+        <li><a href="consult.html">在线咨询</a></li>
+        <li><a href="resources.html">资源库</a></li>
+        <li><a href="faq.html">常见问题</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li><a href="membership.html" aria-current="page">会员中心</a></li>
+        <li><a class="lang-switch" href="en/membership.html">EN</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding:48px 0 36px;">
+    <div class="container">
+      <span class="eyebrow">会员中心</span>
+      <h1 class="mt-0">选择适合您当前阶段的服务深度</h1>
+      <p class="lead">从公开资讯到完整机构库、AI 解读与专属顾问对接，三档会员对应不同的信息与服务深度。</p>
+      <div class="hero-actions">
+        <span class="demo-badge"><svg class="icon-svg" aria-hidden="true"><use href="assets/icons.svg#i-sparkle"></use></svg>产品概念演示</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="member-status" id="member-status" hidden></div>
+
+      <div class="pricing-grid">
+
+        <article class="pricing-card">
+          <h3>免费</h3>
+          <p class="pricing-tagline">先了解，不着急</p>
+          <div class="pricing-price">$0</div>
+          <p class="pricing-note">无需付费，注册即可使用</p>
+          <ul>
+            <li><span class="tick">✓</span>资讯中心全部文章</li>
+            <li><span class="tick">✓</span>机构库：每州 3 家机构预览</li>
+            <li><span class="tick">✓</span>常见问题 / 资源库完全开放</li>
+            <li><span class="tick">✓</span>标准顾问咨询排期</li>
+          </ul>
+          <button type="button" class="btn btn-outline" data-select-tier="free">选择免费方案</button>
+        </article>
+
+        <article class="pricing-card featured">
+          <span class="pricing-badge">最多人选择</span>
+          <h3>进阶会员</h3>
+          <p class="pricing-tagline">认真在比较机构</p>
+          <div class="pricing-price">$29<span>/ 月（示例价格）</span></div>
+          <p class="pricing-note">已包含免费方案全部权益</p>
+          <ul>
+            <li><span class="tick">✓</span>解锁完整机构库（109 家 + CDC 数据）</li>
+            <li><span class="tick">✓</span>Google / Yelp 评价跳转链接全开放</li>
+            <li><span class="tick">✓</span>AI 报告解读：逐项指标详细解读</li>
+            <li><span class="tick">✓</span>会员专享深度文章</li>
+            <li><span class="tick">✓</span>48 小时内优先顾问响应</li>
+          </ul>
+          <button type="button" class="btn btn-primary" data-select-tier="plus">升级到进阶会员</button>
+        </article>
+
+        <article class="pricing-card">
+          <h3>尊享会员</h3>
+          <p class="pricing-tagline">准备好推进方案</p>
+          <div class="pricing-price">$99<span>/ 月（示例价格）</span></div>
+          <p class="pricing-note">已包含进阶会员全部权益</p>
+          <ul>
+            <li><span class="tick">✓</span>专属顾问一对一对接</li>
+            <li><span class="tick">✓</span>24 小时内优先响应</li>
+            <li><span class="tick">✓</span>定制机构匹配建议</li>
+            <li><span class="tick">✓</span>优先预约通道</li>
+          </ul>
+          <button type="button" class="btn btn-outline" data-select-tier="premium">升级到尊享会员</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container" style="max-width:640px;">
+      <div class="section-head">
+        <span class="eyebrow">演示登录</span>
+        <h2>体验不同会员等级看到的内容</h2>
+        <p>本页登录为演示模拟，仅保存在您浏览器本地，不涉及真实账号、支付或数据库。选择一个等级登录后，可在机构库、AI 报告解读、资讯中心看到对应的分级效果。</p>
+      </div>
+
+      <div class="form-card">
+        <form id="member-login-form">
+          <div class="form-row">
+            <label for="member-name">您的称呼</label>
+            <input type="text" id="member-name" placeholder="例如：王女士">
+          </div>
+          <div class="form-row">
+            <label>会员等级</label>
+            <div class="radio-group">
+              <label class="radio-pill"><input type="radio" name="member-tier" value="free" checked> 免费</label>
+              <label class="radio-pill"><input type="radio" name="member-tier" value="plus"> 进阶会员</label>
+              <label class="radio-pill"><input type="radio" name="member-tier" value="premium"> 尊享会员</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">登录演示</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>元孕 Metagyny</h4>
+        <p style="color:var(--color-text-muted); font-size:0.92rem; max-width:280px;">专注美国试管婴儿（IVF）资讯与服务的一站式平台，陪伴每一个家庭走过求子之路。</p>
+      </div>
+      <div>
+        <h4>快速链接</h4>
+        <ul>
+          <li><a href="articles.html">资讯中心</a></li>
+          <li><a href="clinics.html">机构库</a></li>
+          <li><a href="resources.html">资源库</a></li>
+          <li><a href="faq.html">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于平台</h4>
+        <ul>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="consult.html">在线咨询</a></li>
+          <li><a href="membership.html">会员中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系方式</h4>
+        <ul>
+          <li>微信客服：metagyny-ivf（示例）</li>
+          <li>咨询邮箱：hello@example.com</li>
+          <li>服务时间：周一至周日 9:00–21:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p>本站内容仅供信息参考，不构成医疗建议。具体诊疗方案请以专业医生面诊评估为准。</p>
+      <p>会员体系为产品概念演示：登录状态与等级仅保存在您的浏览器本地，不涉及真实账号、支付或后端数据库，正式上线前需接入真实的用户与订阅系统。</p>
+      <p>© 2025 元孕 Metagyny. 机构库数据整理自 FertilityIQ 与 SART（美国生殖医学学会）官方认证名录，其余资讯、顾问及费用内容为示例，正式上线前请核实替换。</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
