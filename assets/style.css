@@ -263,6 +263,39 @@ p { margin: 0 0 1em; color: var(--color-text); }
   opacity: 0.9;
   z-index: 0;
 }
+.petal-field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.petal-field .petal {
+  position: absolute;
+  top: -40px;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, var(--color-highlight), var(--color-primary));
+  border-radius: 0 60% 0 60%;
+  opacity: 0.55;
+  animation: petal-fall linear infinite, petal-sway ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes petal-fall {
+  from { transform: translateY(-40px) rotate(0deg); }
+  to { transform: translateY(640px) rotate(360deg); }
+}
+@keyframes petal-sway {
+  0%, 100% { margin-left: 0; }
+  50% { margin-left: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .petal-field { display: none; }
+}
+@media (max-width: 640px) {
+  .petal-field .petal:nth-child(n+9) { display: none; }
+}
+
 .hero .container { position: relative; z-index: 1; }
 .hero .eyebrow {
   display: inline-flex;
@@ -426,6 +459,8 @@ p { margin: 0 0 1em; color: var(--color-text); }
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding-block: 10px;
+  margin-block: -10px;
 }
 .card .card-link .icon-svg { width: 15px; height: 15px; stroke-width: 2; transition: transform 0.18s ease; }
 .card .card-link:hover .icon-svg { transform: translateX(3px); }
@@ -1091,7 +1126,10 @@ tr:last-child td { border-bottom: none; }
 
 @media (max-width: 680px) {
   .clinic-row { flex-direction: column; align-items: flex-start; }
-  .clinic-row .cr-stats { width: 100%; justify-content: space-between; }
+  .clinic-row .cr-stats { width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .clinic-row .cr-rating .cr-meta,
+  .clinic-row .cr-cdc .cr-meta { white-space: normal; max-width: 220px; }
+  .clinic-row .cr-rating, .clinic-row .cr-cdc { text-align: left; }
 }
 
 /* ---------- Nav CTA pill (invest page link) ---------- */

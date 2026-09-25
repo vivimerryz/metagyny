@@ -87,6 +87,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initMemberBar();
 
+  // Homepage hero: falling petal decoration
+  const petalField = document.getElementById('petal-field');
+  if (petalField) {
+    const PETAL_COUNT = 16;
+    for (let i = 0; i < PETAL_COUNT; i++) {
+      const petal = document.createElement('span');
+      petal.className = 'petal';
+      const size = 8 + Math.random() * 10;
+      petal.style.left = `${Math.random() * 100}%`;
+      petal.style.width = `${size}px`;
+      petal.style.height = `${size}px`;
+      petal.style.opacity = String(0.35 + Math.random() * 0.35);
+      petal.style.animationDuration = `${9 + Math.random() * 8}s, ${3 + Math.random() * 2}s`;
+      petal.style.animationDelay = `${Math.random() * -14}s, ${Math.random() * -4}s`;
+      petalField.appendChild(petal);
+    }
+  }
+
   // Generic category filter (shared by FAQ / Articles / Clinics)
   document.querySelectorAll('[data-filter-group]').forEach((group) => {
     const filterBtns = group.querySelectorAll('.filter-btn');
